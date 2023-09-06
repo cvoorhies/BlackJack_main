@@ -111,11 +111,11 @@ class Game:
             for i in range(2):
                 player_hand.add_card(deck.deal(1))
                 dealer_hand.add_card(deck.deal(1))
+
             print()
             print("*" * 30)
             print(f"Game {game_number} of {games_to_play}")
             print("*" * 30)
-
             player_hand.display()
             dealer_hand.display()
 
@@ -124,10 +124,10 @@ class Game:
 
             choice = ""
             while player_hand.get_value() < 21 and choice not in ["s", "stand"]:
-                choice = input("Please choose 'Hit ' or 'Stand: '").lower()
+                choice = input("Please choose 'Hit' or 'Stand': ").lower()
                 print()
-                while choice not in ["h", "s", "Hit", "Stand"]:
-                    choice = input("Please enter 'Hit ' or 'Stand '").lower()
+                while choice not in ["h", "s", "hit", "stand"]:
+                    choice = input("Please enter 'Hit' or 'Stand': ").lower()
                     print()
                 if choice in ["hit", "h"]:
                     player_hand.add_card(deck.deal(1))
